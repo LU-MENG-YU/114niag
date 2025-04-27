@@ -1,7 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import json
-from datetime import datetime
+from datetime import datetime, timedelta
 
 id_list = [
     (1, 189, "一般女生組100公尺自由式 預賽"),(2, 149, "一般男生組50公尺蛙式 預賽"),(3, 111, "一般女生組50公尺背式 預賽"),(4, 72, "公開男生組400公尺自由式 慢組計時決賽"),(5, 209, "一般女生組100公尺蝶式 預賽"),
@@ -94,7 +94,7 @@ def main():
                 "order": order,
                 "id": id_,
                 "title": title,
-                "timestamp": datetime.now().isoformat(),
+                "timestamp": (datetime.utcnow() + timedelta(hours=8)).isoformat(),
                 "scores": scores
             })
 
