@@ -1,0 +1,33 @@
+name: Update Scores
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # 每5分鐘跑一次
+  workflow_dispatch:     # 可以手動觸發
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: pip install requests beautifulsoup4
+
+    - name: Run fetch_scores.py
+      run: python fetch_scores.py
+
+    - name: Commit and Push
+      run: |
+        git config --global user.name 'github-actions'
+        git config --global user.email 'github-actions@github.com'
+        git add data/score.json
+        git commit -m 'Update score.json [skip ci]' || echo "No changes to commit"
+        git push
