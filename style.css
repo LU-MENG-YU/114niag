@@ -1,10 +1,19 @@
 body {
     font-family: Arial, sans-serif;
     padding: 20px;
+    background-color: #f8f9fa;
 }
 
 h1 {
     text-align: center;
+    color: #007bff;
+}
+
+.update-time {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+    color: #555;
 }
 
 input#searchInput {
@@ -12,21 +21,35 @@ input#searchInput {
     padding: 10px;
     margin: 20px 0;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+#loading {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 50px;
 }
 
 .event-section {
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fff;
+    overflow: hidden;
 }
 
-.event-title {
-    background-color: #f2f2f2;
+.event-header {
+    background-color: #007bff;
+    color: white;
     padding: 10px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .score-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 10px;
 }
 
 .score-table th, .score-table td {
@@ -36,6 +59,18 @@ input#searchInput {
 }
 
 .score-table th {
-    background-color: #4CAF50;
+    background-color: #007bff;
     color: white;
+}
+
+.highlight {
+    background-color: #d4edda;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .score-table th, .score-table td {
+        padding: 5px;
+        font-size: 12px;
+    }
 }
