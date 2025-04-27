@@ -11,13 +11,13 @@ id_list = [
 
 def fetch_score(id_):
     url = f"https://114niag.cjcu.edu.tw/Public/Race/Report_Score.aspx?id={id_}"
-    print(f"Fetching {url}")  # 印出目前正在抓哪個網址
+    print(f"Fetching {url}")
     try:
         headers = {
             "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.85 Safari/537.36"
         }
-        res = requests.get(url, headers=headers, timeout=10)
-        print(f"Status Code: {res.status_code}")  # 印出回應狀態碼
+        res = requests.get(url, headers=headers, timeout=10, verify=False)  # <--- 這裡加 verify=False
+        print(f"Status Code: {res.status_code}")
         res.raise_for_status()
     except requests.RequestException as e:
         print(f"Request error: {e}")
