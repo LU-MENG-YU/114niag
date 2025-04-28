@@ -4,6 +4,13 @@ async function fetchScores() {
     return data;
 }
 
+function scrollToTarget(id) {
+    const target = document.getElementById(id);
+    if (target) {
+        target.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 function createTable(scores) {
     const table = document.createElement('table');
     table.className = 'score-table';
@@ -24,7 +31,6 @@ function createTable(scores) {
         headers.forEach(header => {
             const td = document.createElement('td');
             td.textContent = score[header];
-            // 如果有晉級(q01, q02...)，加上 highlight
             if (header.includes('晉級') && score[header] && score[header].toLowerCase().startsWith('q')) {
                 td.className = 'highlight';
             }
@@ -41,10 +47,32 @@ function renderScores(data) {
     const container = document.getElementById('scoreContainer');
     container.innerHTML = '';
 
-    // 按 order 排序
+    const milestones = {
+        1: { id: 'jump-day1-prelim', label: '📅 Day-1 預賽' },
+        20: { id: 'jump-day1-final', label: '📅 Day-1 決賽' },
+        39: { id: 'jump-day2-prelim', label: '📅 Day-2 預賽' },
+        56: { id: 'jump-day2-final', label: '📅 Day-2 決賽' },
+        73: { id: 'jump-day3-prelim', label: '📅 Day-3 預賽' },
+        91: { id: 'jump-day3-final', label: '📅 Day-3 決賽' },
+        109: { id: 'jump-day4-prelim', label: '📅 Day-4 預賽' },
+        128: { id: 'jump-day4-final', label: '📅 Day-4 決賽' },
+        147: { id: 'jump-day5-prelim', label: '📅 Day-5 預賽' },
+        158: { id: 'jump-day5-final', label: '📅 Day-5 決賽' },
+        201: { id: 'jump-timed-final', label: '📅 計時決賽' },
+    };
+
     data.sort((a, b) => a.order - b.order);
 
     data.forEach(event => {
+        // 插入分隔標題
+        if (milestones[event.order]) {
+            const divider = document.createElement('div');
+            divider.className = 'milestone';
+            divider.id = milestones[event.order].id;
+            divider.textContent = milestones[event.order].label;
+            container.appendChild(divider);
+        }
+
         const section = document.createElement('div');
         section.className = 'event-section';
 
