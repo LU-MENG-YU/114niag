@@ -8,9 +8,24 @@
 </head>
 <body>
     <h1>成績查詢系統</h1>
+
+    <div id="jump-buttons">
+        <button onclick="scrollToTarget('jump-day1-prelim')">Day-1 預賽</button>
+        <button onclick="scrollToTarget('jump-day1-final')">Day-1 決賽</button>
+        <button onclick="scrollToTarget('jump-day2-prelim')">Day-2 預賽</button>
+        <button onclick="scrollToTarget('jump-day2-final')">Day-2 決賽</button>
+        <button onclick="scrollToTarget('jump-day3-prelim')">Day-3 預賽</button>
+        <button onclick="scrollToTarget('jump-day3-final')">Day-3 決賽</button>
+        <button onclick="scrollToTarget('jump-day4-prelim')">Day-4 預賽</button>
+        <button onclick="scrollToTarget('jump-day4-final')">Day-4 決賽</button>
+        <button onclick="scrollToTarget('jump-day5-prelim')">Day-5 預賽</button>
+        <button onclick="scrollToTarget('jump-day5-final')">Day-5 決賽</button>
+        <button onclick="scrollToTarget('jump-timed-final')">計時決賽</button>
+    </div>
+
     <div id="updateTime" class="update-time">資料載入中...</div>
 
-    <input type="text" id="searchInput" placeholder="這個還沒好">
+    <input type="text" id="searchInput" placeholder="還沒好...">
 
     <div id="loading">載入中...</div>
     <div id="scoreContainer" style="display:none;"></div>
