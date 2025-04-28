@@ -56,7 +56,7 @@ function renderScores(data) {
         91: { id: 'jump-day3-final', label: '📅 Day-3 決賽' },
         109: { id: 'jump-day4-prelim', label: '📅 Day-4 預賽' },
         128: { id: 'jump-day4-final', label: '📅 Day-4 決賽' },
-        147: { id: 'jump-day5-prelim', label: '📅 Day-5 預賽' },
+        148: { id: 'jump-day5-prelim', label: '📅 Day-5 預賽' },
         158: { id: 'jump-day5-final', label: '📅 Day-5 決賽' },
         201: { id: 'jump-timed-final', label: '📅 計時決賽' },
     };
