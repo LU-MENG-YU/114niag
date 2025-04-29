@@ -1,49 +1,85 @@
-# 成績查詢系統 - 114全大運游泳
+# 成績查詢系統 - 114全大運游泳 🏊‍♂️
 
-[![網站傳送門](https://img.shields.io/badge/網站傳送門-114niag-blue?style=for-the-badge&logo=googlechrome)](https://lu-meng-yu.github.io/114niag/)
-
----
-
-## 介紹
-
-這是一個專門為114全大運游泳成績查詢設計的網頁系統，  
-自動整理了多天多場次的預賽與決賽成績，提供：
-
-- 【即時更新】每5分鐘自動同步官方成績資料
-- 【分段導航】一鍵跳轉到指定日期與場次
-- 【手機、平板、電腦】全面自適應美觀排版
-- 【晉級標示】自動高亮顯示晉級選手
+[![網站傳送門](https://img.shields.io/badge/前往網站-114niag-blueviolet?style=for-the-badge&logo=googlechrome)](https://lu-meng-yu.github.io/114niag/)
 
 ---
 
-## 網站特色
+## 🌟 網站預覽
 
-- 乾淨簡潔的介面設計
-- 自動分類各天的預賽、決賽、計時決賽
-- 點擊展開比賽成績，收合不佔版面
-- 手機端也能輕鬆使用
-- Loading 動畫提示，體驗流暢
+> 即時同步！分段導覽！
+
+![網站預覽圖](https://dummyimage.com/1200x600/87cefa/ffffff&text=114niag+成績查詢系統)
 
 ---
 
-## 更新說明
+## 🚀 專案簡介
 
-資料由 GitHub Actions 自動更新，  
-每5分鐘自動爬取官方網站最新成績並同步至頁面，  
-保證資訊新鮮又快速！
-
----
-
-## 使用技術
-
-- HTML5 + CSS3 + JavaScript
-- GitHub Actions（自動化爬蟲與資料同步）
-- GitHub Pages（免費網頁托管）
+一個為114全大運游泳比賽設計的**即時成績查詢網站**：  
+支援即時更新、分段跳轉、自適應RWD設計！
 
 ---
 
-## 特別感謝
+## 📋 功能亮點
 
-感謝[長榮大學](https://www.cjcu.edu.tw/)提供官方成績
+- 📅 **分段導航**：Day-1到Day-5以及計時決賽，一鍵跳轉
+- 🏅 **晉級標示**：自動高亮晉級選手
+- ⏱️ **自動更新**：每5分鐘同步一次最新官方成績
+- 📱 **手機友善**：RWD設計，手機平板完美瀏覽
+- ⚡ **流暢體驗**：簡潔快速的操作感受
+- ✨ **極速載入**：loading動畫提示，秒開秒查
 
 ---
+
+## 🛠️ 使用技術
+
+<p align="center">
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white">
+  <img src="https://img.shields.io/badge/GitHub%20Pages-222222?style=for-the-badge&logo=github&logoColor=white">
+</p>
+
+---
+
+## 📅 成績分段一覽
+
+| 日期 | 場次 |
+|:---|:---|
+| Day-1 | 預賽、決賽 |
+| Day-2 | 預賽、決賽 |
+| Day-3 | 預賽、決賽 |
+| Day-4 | 預賽、決賽 |
+| Day-5 | 預賽、決賽 |
+| 最後 | 計時決賽 |
+
+點擊網站上方導航按鈕即可快速前往！
+
+---
+
+## 🔄 自動更新流程
+
+- GitHub Actions 定時執行爬蟲
+- 擷取最新成績資料，更新 `score.json`
+- 網站每次打開自動讀取最新資料
+- 完全免人工操作，自動化同步！
+
+---
+
+## 🗓️ 打卡日誌
+
+| 日期 | 更新內容 |
+|:---|:---|
+| 2025-04-27 | 完成初版網站、自動爬蟲、基本搜尋功能 |
+| 2025-04-28 | 新增分段跳轉、分隔標題、自適應手機版 |
+| 2025-04-29 | 美化網站介面、升級README文件、優化UX |
+
+---
+
+## 🙏 特別感謝
+
+感謝 [長榮大學](https://www.cjcu.edu.tw/) 提供官方比賽成績！  
+
+---
+
+> 🏊‍♂️ **每一份努力，都值得被記錄**
